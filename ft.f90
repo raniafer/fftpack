@@ -20,6 +20,7 @@ module m
 	call dffti(M, wsave)
 
 	open(unit=20, file="cos.txt")
+ 	! result files to plot with gnuplot
 	open(unit=30, file="result.txt")
 	open(unit=40, file="result2.txt")
 	
@@ -57,7 +58,7 @@ module m
 	end subroutine
 end module 
 !compile with gfortran -o ft ft.f90 -ldfftpack -Lfftpack/src -Ifftpack/src
-program pleeease
+program cos_fourier_transform
 	use m
 	
 	print*, "start"
